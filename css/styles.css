@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Syne';
+    src: url('../fonts/Syne-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+:root {
+    
+    /* --- FONDOS --- */
+    --bg-body: #0a0a0a;
+    --bg-panel: #171717;
+    --bg-card: rgba(255, 255, 255, 0.03);
+    
+    /* --- COLORES DE ACCENTO --- */
+    --accent: #dc2626;
+    --accent-hover: #ef4444;
+    --accent-dim: rgba(220, 38, 38, 0.15);
+    
+    /* --- TEXTOS --- */
+    --text-main: #ffffff;
+    --text-muted: #a3a3a3;
+
+    /* --- FUENTES --- */
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    
+    /* --- UTILIDADES VISUALES --- */
+    --radius: 24px;
+    --glass: blur(20px);
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    background-color: var(--bg-body);
+}
