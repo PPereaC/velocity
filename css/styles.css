@@ -45,6 +45,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
@@ -75,6 +77,7 @@ body {
     padding: 5px 0;
     letter-spacing: -0.02em;
     text-decoration: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .nav-link::after {
@@ -107,6 +110,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-button {
@@ -143,9 +147,11 @@ body {
     opacity: 0;
     animation: slideUp 1s var(--ease-out) forwards 0.5s;
     text-transform: uppercase;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.4);
 
     span {
         color: var(--accent);
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
 }
