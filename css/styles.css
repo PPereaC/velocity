@@ -40,6 +40,11 @@
 
 body {
     background-color: var(--bg-body);
+    background-image: url(../images/bg_hero_section.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .navbar {
@@ -48,11 +53,15 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
     ul {
         display: flex;
         gap: 35px;
+        list-style: none;
     }
 
 }
@@ -121,4 +130,67 @@ body {
 .navbar-buttons-container {
     display: flex;
     gap: 15px;
+}
+
+/* HERO */
+.hero-headline {
+    color: var(--text-main);
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: slideUp 1s var(--ease-out) forwards 0.5s;
+    text-transform: uppercase;
+
+    span {
+        color: var(--accent);
+    }
+
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+    height: 80vh;
+    text-align: start;
+    padding: 0 3rem;
+}
+
+.btn-garage {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s var(--ease-out);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: slideUp 1s var(--ease-out) forwards 0.5s;
+}
+
+.btn-garage:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
