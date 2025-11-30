@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Added version parameter ?v=1.1 to force cache refresh -->
-    <link rel="stylesheet" href="css/styles.css?v=1.1">
+    <link rel="stylesheet" href="css/styles.css?v=1.5">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Velocity</title>
 </head>
@@ -372,11 +371,14 @@
                 // Menú móvil hamburguesa
                 const hamburger = document.querySelector('.hamburger-menu');
                 const navMenu = document.querySelector('.nav-menu');
+                const navbar = document.querySelector('.navbar');
                 const navLinks = document.querySelectorAll('.nav-link');
 
                 if (hamburger) {
                     hamburger.addEventListener('click', () => {
                         navMenu.classList.toggle('active');
+                        navbar.classList.toggle('menu-open');
+                        
                         const icon = hamburger.querySelector('i');
                         if (navMenu.classList.contains('active')) {
                             icon.classList.remove('bi-list');
@@ -392,6 +394,8 @@
                 navLinks.forEach(link => {
                     link.addEventListener('click', () => {
                         navMenu.classList.remove('active');
+                        navbar.classList.remove('menu-open');
+                        
                         const icon = hamburger.querySelector('i');
                         icon.classList.remove('bi-x-lg');
                         icon.classList.add('bi-list');

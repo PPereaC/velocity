@@ -223,6 +223,7 @@ section {
 .container {
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
 /* SECCIONES */
@@ -1028,6 +1029,10 @@ footer {
     .hamburger-menu {
         display: block;
     }
+    .navbar.menu-open {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
 
     .nav-menu {
         position: fixed;
@@ -1037,6 +1042,7 @@ footer {
         height: 100vh;
         background: rgba(5, 5, 5, 0.98);
         backdrop-filter: blur(15px);
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -1049,12 +1055,14 @@ footer {
         opacity: 0;
         visibility: hidden;
         transform: scale(0.95);
+        pointer-events: none;
     }
 
     .nav-menu.active {
         opacity: 1;
         visibility: visible;
         transform: scale(1);
+        pointer-events: all;
     }
 
     .nav-link {
