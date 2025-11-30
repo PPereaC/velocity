@@ -411,8 +411,15 @@ section {
 }
 
 @keyframes iconPulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
-    50% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(220, 38, 38, 0);
+    }
 }
 
 .ui-content {
@@ -719,3 +726,89 @@ section {
     transform: translateY(0);
     box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4);
 }
+
+/*---------------------------------------------------------
+    Fin Sección Planes y Precios
+----------------------------------------------------------*/
+
+/*---------------------------------------------------------
+    Sección Playground
+---------------------------------------------------------*/
+
+.playground-experiences-grid {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.pg-card {
+    flex: 1;
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: flex 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    filter: grayscale(0.8);
+}
+
+.pg-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.pg-card:hover {
+    flex: 4;
+    filter: grayscale(0);
+}
+
+.pg-card:hover img {
+    transform: scale(1.1);
+}
+
+.pg-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 2.5rem;
+    background: linear-gradient(to top, black, transparent);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.5s 0.2s;
+    box-sizing: border-box;
+}
+
+.pg-card:hover .pg-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.card-title {
+    color: var(--text-main);
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.card-desc {
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/*---------------------------------------------------------
+    Fin Sección Playground
+---------------------------------------------------------*/
