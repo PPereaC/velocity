@@ -9,16 +9,6 @@
 
 ---
 
-## 📋 Tabla de Contenidos
-1. [Descripción del Proyecto](#-descripción-del-proyecto)
-2. [Tecnologías Utilizadas](#-tecnologías-utilizadas)
-3. [Estructura del Proyecto](#-estructura-del-proyecto)
-4. [Instalación y Despliegue](#-instalación-y-despliegue)
-5. [Características Destacadas](#-características-destacadas)
-6. [Anexo: Referencia de Sintaxis Markdown](#-anexo-referencia-de-sintaxis-markdown)
-
----
-
 ## 📖 Descripción del Proyecto
 
 **Velocity** es una Landing Page diseñada bajo la filosofía *Mobile First*, orientada a un usuario de perfil alto (High Net Worth Individual). El diseño se aleja de las estructuras corporativas tradicionales para ofrecer una sensación cinemática y exclusiva ("Dark Mode" nativo).
